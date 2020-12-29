@@ -10,9 +10,9 @@
 * About 頁面的聚光燈的方向會跟著滑鼠的位置變動
 * Contact 頁面右下角的鞋子會跟著滑鼠所在的位置做上下變化
 
-![Imgur image](https://imgur.com/zKUfB0p.jpg)
-![Imgur image](https://imgur.com/s9JuJ4y.jpg)
-![Imgur image](https://imgur.com/JA7jr1b.jpg)
+![Imgur image](https://i.imgur.com/0fe71qA.jpeg)
+![Imgur image](https://i.imgur.com/XIXlCMF.jpeg)
+![Imgur image](https://i.imgur.com/DxHYuck.jpg)
 
 ### 使用技術
 * 以 HTML 語意標籤分出網頁的 header、section、footer
