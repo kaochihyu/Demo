@@ -1,0 +1,447 @@
+// 顏色變數
+$color_white: #F4F6F6
+$color_pink: #FF9C91
+$color_red: #CD3F3E
+$color_blue: #1C2938
+$color_gray: #595757    
+// ------------------------
+*
+  font-family: 'Red Hat Text','微軟正黑體'
+
+//debug
+*
+//   border: solid 1px black 
+// header,section
+//   display: none
+// #footer
+//   display: block
+
+// ------------------------
+@mixin ab_center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%) 
+@mixin size($w,$h)
+  width: $w
+  height: $h  
+// ------------------------
+html,body
+  overflow-x: hidden
+  font-size: 14px
+  
+#header_index
+  background-color: $color_white
+  position: relative
+  margin-top: 50px
+  .container
+    padding-bottom: 100px
+    margin-top: 30px
+    @media only screen and(max-width: 765px)
+      padding-bottom: 430px
+  .row1
+    font-family: 'Aleo'
+    letter-spacing: 3px
+    h6
+      font-size: 18px
+      padding: 30px
+      font-weight: 500
+      color: $color_blue
+      @media only screen and(max-width: 765px)
+        opacity: 0
+  .row2
+    img
+      width: 100%
+      position: absolute
+      transform: translateX(20px)
+      z-index: 5
+      @media only screen and(max-width: 765px)
+        width: 80%
+        transform: none
+        margin: 50px
+  .row3
+    position: relative
+    top: 150px
+    left: 100px
+    color: $color_blue
+    @media only screen and(max-width: 765px)
+      position: absolute
+      top: 370px
+      
+    
+      
+    h5
+      font-size: 18px    
+    p
+      font-weight: 400
+      margin-bottom: 0
+  .row4
+    display: inline-block
+    position: relative
+    top: 180px
+    left: 130px
+    color: $color_gray
+  .tapshoe
+    width: 110%
+    transform: translate(-15%,-15%)
+    @media only screen and(max-width: 765px)
+      +ab_center
+      width: 80%
+      
+//-----------------------------
+h4.btntext
+  font-family: 'Barlow Semi Condensed'
+  font-size: 20px
+  cursor: pointer
+.btnline
+  +size(180px,20px)
+  border-bottom: 1px solid $color_gray  
+  margin-top: 20px
+  
+//-----------------------------------   
+nav.navbar
+  background-color: white
+  padding: 25px
+  border: none
+  .navbar-brand
+    color: black
+    font-weight: bold
+    font-family: 'Aleo'
+  a
+    font-family: 'Red Hat Text' 
+
+//-----------------------------------  
+section
+  position: relative
+.pagetitle
+  background-color: white
+  padding: 50px 50px
+  color: $color_gray
+  position: relative
+  h5 
+    font-size: 16px
+    font-weight: 400
+.titleline
+  width: 100px
+  height: 2px
+  margin-left: 100px
+  display: inline-block
+  position: absolute
+  top: 50%
+  border-bottom: 0.5px solid lightgray
+
+//-----------------------------------  
+#section_about
+  background-color: $color_red 
+  color: $color_pink
+  #spotlight
+    position: absolute
+    width: 10%
+    min-width: 100px
+    bottom: 10%
+    right: 10%
+    @media only screen and(max-width: 765px)
+      right: 20%
+  #shoes
+    width: 5%
+    min-width: 70px
+    position: absolute
+  .col-sm-6.left
+    padding: 100px 0 
+    transform: rotate(-6deg)
+  .sqr
+    background-color: $color_pink
+    display: inline-block
+    @media only screen and(max-width: 765px)
+      background-color: transparent
+  .sqr1
+    +size(20px,40px)
+    transition: 0.2s
+  .sqr2
+    +size(40px,35px)
+    transition: 0.3s
+  p.r3text
+    font-size: 18px
+    font-family: 'Aleo'
+    letter-spacing: 3px
+    font-weight: 300
+    text-align: center
+    padding: 20px
+    transition: 0.2s
+  .r3icon
+    width: 80%
+    transform: translateX(60px) rotate(5deg)
+  .sqr3
+    +size(25px,20px)
+  .sqr4
+    +size(20px,20px)
+    transition: 0.1s
+  .sqr5
+    +size(15px,55px)
+    transition: 0.5s
+  .circle
+    width: 100%
+    position: absolute
+    transform: translate(-40px,-40px)
+    
+  .col-sm-6.right
+    padding: 100px 50px
+    transform: translateY(30%) rotate(-10deg)
+    @media only screen and(max-width: 765px)
+      transform: translateY(-70%) rotate(-10deg)
+    p.text
+      font-size: 18px
+      @media only screen and(max-width: 765px)
+        padding: 0 20px
+      
+    .btng
+      transform: translateY(50px)
+    .btnline
+      border-bottom: 1px solid $color_pink
+      margin-top: 20px
+//-------------------------------------      
+section#section_courses
+  .container
+    padding: 80px 0
+  .rec,.name,.content,.btng
+    margin: 0 20px
+  .rec
+    height: 400px
+    margin: 20px
+    position: relative
+    background-color: $color_white
+    @media only screen and(max-width: 765px)
+      margin: 30px 50px
+    h5.type
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      font-size: 25px
+      font-family: 'Satisfy'
+      @media only screen and(max-width: 765px)
+        top: 10%
+        left: 15%
+        font-size: 36px
+      
+        
+    .type1
+      color: $color_pink
+    .type2
+      color: $color_red
+    .type3
+      color: $color_blue
+  .name
+    @media only screen and(max-width: 765px)
+      position: absolute
+      top: 30%
+      left: 50%
+      transform: translateX(-60%)
+
+      
+  .subtext
+    font-family: 'Aleo'
+    letter-spacing: 1px
+    
+
+  .classname
+    padding: 20px 0 
+    @media only screen and(max-width: 765px)
+      font-size: 30px
+
+  .content
+    @media only screen and(max-width: 765px)
+      color: transparent
+    p
+      font-size: 16px
+      font-weight: 500
+      margin-bottom: 0
+     
+.btng 
+  margin-top: 20px
+  float: right
+  .btncircle 
+    +size(50px,50px)
+    border: 1px solid lightgray
+    border-radius: 100%
+    transform: translate(-25px,-35px)
+//------------------------------------
+section#section_photos
+  background-color: $color_pink
+  padding-bottom: 80px 
+  .photo
+    margin: 20px
+    cursor: pointer
+    &:hover
+      .line
+        width: 50%
+  .photo1
+    transform: translateY(-60px)
+  .photo2
+    transform: translateY(40px)
+  .image
+    width: 100%
+    
+  .photobtn
+    .more
+      padding: 0 10px
+      float: right
+      color: $color_pink
+      font-size: 22px
+      font-weight: 500
+      transform: translateY(-18px)
+    .line
+      width: 50px
+      height: 2px
+      border-bottom: 10px solid $color_red
+      position: absolute
+      right: 120px
+      transform: translateY(-5px)
+      transition: 0.5s
+  .content
+    margin-top: 40px
+    p
+      color: $color_white
+      font-family: 'Aleo'
+      letter-spacing: 1px
+  .content2
+    p
+      text-align: right
+  .btng
+    color: $color_white
+    .btnline
+      border-bottom: 1px solid $color_white
+  
+//-------------------------
+section#section_contact
+  .steps
+    width: 80%
+    max-width: 100px
+    position: absolute
+    right: 30%
+    bottom: 0
+    z-index: 5
+  #step_blue
+    transform: translateX(-100px)
+  #step_pink
+  #step_red
+    transform: translateX(100px)
+    
+  .container
+    padding: 100px 50px
+    .info
+      font-family: 'Aleo'
+      color: #000
+      text-align: center
+      h6
+        font-weight: bold 
+      .tel
+        padding: 10px 0
+        &:before
+          content: ""
+          width: 5%
+          display: block
+          border-top: 4px solid $color_pink
+          padding: 10px 0
+          margin: 0 auto
+  
+    
+  .btnsqr
+    padding: 60px 0
+    margin-top: 100px 
+    text-align: center
+    transition: 0.5s
+    cursor: pointer
+    font-family: 'Satisfy'
+    
+    p
+      opacity: 0
+      transition: 0.5s
+    &:hover
+      box-shadow: 0 0 30px 2px rgba($color_pink, 0.5)
+      p
+        opacity: 1
+  .btnsqr1
+    margin-right: 50px
+    @media only screen and(max-width: 765px)
+      margin: 20px
+    h3
+      color: $color_red
+  .btnsqr2
+    margin-left: 50px
+    @media only screen and(max-width: 765px)
+      margin: 20px
+    h3
+      color: $color_pink
+//-----------------------------
+footer#footer
+  @media only screen and(max-width: 765px)
+    margin: 0 50px
+  .container
+    padding: 50px 0
+    border-top: 1px solid lightgray
+    .brandbtn
+      font-family: 'Aleo'
+      font-size: 25px
+      font-weight: bold
+      color: #000
+      padding: 0
+      margin-right: 50px
+      a
+        style: none
+    .icon
+      width: 40px
+      opacity: 0.2
+      padding: 5px
+    nav.navbar.navbar-default
+      background-color: transparent
+      color: lightgray
+      padding: 0
+     
+      
+    
+    
+
+        
+  
+
+         
+          
+        
+        
+        
+        
+    
+      
+
+    
+    
+    
+    
+    
+      
+      
+    
+     
+    
+
+  
+  
+      
+      
+      
+    
+    
+    
+
+     
+
+
+
+
+    
+    
+  
+ 
+    
+  
