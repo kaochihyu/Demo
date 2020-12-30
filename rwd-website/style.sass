@@ -4,28 +4,19 @@ $color_pink: #FF9C91
 $color_red: #CD3F3E
 $color_blue: #1C2938
 $color_gray: #595757    
-// ------------------------
+
 *
   font-family: 'Red Hat Text','微軟正黑體'
-
-//debug
-*
-//   border: solid 1px black 
-// header,section
-//   display: none
-// #footer
-//   display: block
-
-// ------------------------
 @mixin ab_center
   position: absolute
   left: 50%
   top: 50%
-  transform: translate(-50%,-50%) 
+  transform: translate(-50%,-50%)
+  
 @mixin size($w,$h)
   width: $w
-  height: $h  
-// ------------------------
+  height: $h
+  
 html,body
   overflow-x: hidden
   font-size: 14px
@@ -67,9 +58,6 @@ html,body
     @media only screen and(max-width: 765px)
       position: absolute
       top: 370px
-      
-    
-      
     h5
       font-size: 18px    
     p
@@ -87,18 +75,6 @@ html,body
     @media only screen and(max-width: 765px)
       +ab_center
       width: 80%
-      
-//-----------------------------
-h4.btntext
-  font-family: 'Barlow Semi Condensed'
-  font-size: 20px
-  cursor: pointer
-.btnline
-  +size(180px,20px)
-  border-bottom: 1px solid $color_gray  
-  margin-top: 20px
-  
-//-----------------------------------   
 nav.navbar
   background-color: white
   padding: 25px
@@ -108,9 +84,8 @@ nav.navbar
     font-weight: bold
     font-family: 'Aleo'
   a
-    font-family: 'Red Hat Text' 
-
-//-----------------------------------  
+    font-family: 'Red Hat Text'
+//section
 section
   position: relative
 .pagetitle
@@ -129,8 +104,7 @@ section
   position: absolute
   top: 50%
   border-bottom: 0.5px solid lightgray
-
-//-----------------------------------  
+// about page
 #section_about
   background-color: $color_red 
   color: $color_pink
@@ -182,8 +156,7 @@ section
   .circle
     width: 100%
     position: absolute
-    transform: translate(-40px,-40px)
-    
+    transform: translate(-40px,-40px)   
   .col-sm-6.right
     padding: 100px 50px
     transform: translateY(30%) rotate(-10deg)
@@ -192,14 +165,13 @@ section
     p.text
       font-size: 18px
       @media only screen and(max-width: 765px)
-        padding: 0 20px
-      
+        padding: 0 20px      
     .btng
       transform: translateY(50px)
     .btnline
       border-bottom: 1px solid $color_pink
       margin-top: 20px
-//-------------------------------------      
+// course page
 section#section_courses
   .container
     padding: 80px 0
@@ -222,9 +194,7 @@ section#section_courses
       @media only screen and(max-width: 765px)
         top: 10%
         left: 15%
-        font-size: 36px
-      
-        
+        font-size: 36px   
     .type1
       color: $color_pink
     .type2
@@ -236,27 +206,21 @@ section#section_courses
       position: absolute
       top: 30%
       left: 50%
-      transform: translateX(-60%)
-
-      
+      transform: translateX(-60%)     
   .subtext
     font-family: 'Aleo'
     letter-spacing: 1px
-    
-
   .classname
     padding: 20px 0 
     @media only screen and(max-width: 765px)
       font-size: 30px
-
   .content
     @media only screen and(max-width: 765px)
       color: transparent
     p
       font-size: 16px
       font-weight: 500
-      margin-bottom: 0
-     
+      margin-bottom: 0    
 .btng 
   margin-top: 20px
   float: right
@@ -265,7 +229,8 @@ section#section_courses
     border: 1px solid lightgray
     border-radius: 100%
     transform: translate(-25px,-35px)
-//------------------------------------
+
+// photos page
 section#section_photos
   background-color: $color_pink
   padding-bottom: 80px 
@@ -281,7 +246,6 @@ section#section_photos
     transform: translateY(40px)
   .image
     width: 100%
-    
   .photobtn
     .more
       padding: 0 10px
@@ -310,9 +274,8 @@ section#section_photos
   .btng
     color: $color_white
     .btnline
-      border-bottom: 1px solid $color_white
-  
-//-------------------------
+      border-bottom: 1px solid $color_white 
+//contact page
 section#section_contact
   .steps
     width: 80%
@@ -323,10 +286,8 @@ section#section_contact
     z-index: 5
   #step_blue
     transform: translateX(-100px)
-  #step_pink
   #step_red
     transform: translateX(100px)
-    
   .container
     padding: 100px 50px
     .info
@@ -343,9 +304,7 @@ section#section_contact
           display: block
           border-top: 4px solid $color_pink
           padding: 10px 0
-          margin: 0 auto
-  
-    
+          margin: 0 auto  
   .btnsqr
     padding: 60px 0
     margin-top: 100px 
@@ -353,7 +312,6 @@ section#section_contact
     transition: 0.5s
     cursor: pointer
     font-family: 'Satisfy'
-    
     p
       opacity: 0
       transition: 0.5s
@@ -373,7 +331,7 @@ section#section_contact
       margin: 20px
     h3
       color: $color_pink
-//-----------------------------
+// footer
 footer#footer
   @media only screen and(max-width: 765px)
     margin: 0 50px
@@ -397,51 +355,4 @@ footer#footer
       background-color: transparent
       color: lightgray
       padding: 0
-     
       
-    
-    
-
-        
-  
-
-         
-          
-        
-        
-        
-        
-    
-      
-
-    
-    
-    
-    
-    
-      
-      
-    
-     
-    
-
-  
-  
-      
-      
-      
-    
-    
-    
-
-     
-
-
-
-
-    
-    
-  
- 
-    
-  
