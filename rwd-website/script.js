@@ -16,7 +16,7 @@ function detect_step(step_id, x, up, down) {
   }
 }
 
-$(window).mousemove(function(evt){
+$(window).mousemove(function(evt) {
   var pagex = evt.pageX;
   var pagey = evt.pageY;
   
@@ -52,7 +52,7 @@ $(window).mousemove(function(evt){
   if (pagex < spotlightplace - 50 && pagey < spotlighttop) {
     $("#spotlight").attr("src","https://i.postimg.cc/nLz28NCk/spotlight-lefttop.png")
   }
-  
+
   if (pagex > spotlightplace + 50 && pagey < spotlighttop) {
     $("#spotlight").attr("src","https://i.postimg.cc/PrTms07w/spotlight-righttop.png")
   }
