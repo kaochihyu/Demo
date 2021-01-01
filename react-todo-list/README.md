@@ -1,5 +1,5 @@
 ## React Todo List 
-以 React Redux 製作的 todo list，用來熟悉
+以 React Redux 製作的 todo list
 * [Demo](https://kaochihyu.github.io/react-todo-list/)
 
 ![Imgur](https://imgur.com/GfwDl2z.gif)
@@ -21,6 +21,7 @@
 * 搭配使用 styled-components 進行樣式撰寫
 * 使用 redux store 管理狀態
 * 使用 reducer 更新狀態 
+* 使用 redux hooks 連結 react、redux
 
 ### 專案結構
 * src/
