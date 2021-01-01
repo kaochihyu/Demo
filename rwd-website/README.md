@@ -1,6 +1,6 @@
 ## RWD Website
 一個 RWD 的一頁式靜態互動網頁
-* [Demo](https://kaochihyu.github.io/rwd-website/)
+* [Demo](https://kaochihyu.github.io/demo/rwd-website/)
 
 ![Imgur](https://imgur.com/VDPSowu.gif)
 
