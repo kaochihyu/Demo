@@ -1,4 +1,4 @@
-## Twitch Game
+## Twitch Top Games
 串接 Twitch API
 * [Demo](https://kaochihyu.github.io/demo/twitch/)
 
