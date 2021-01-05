@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Twitch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <style>
+      * {
+        font-family: '微軟正黑體';
+        /*border: solid 1px #555;*/
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .navbar {
+        box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+      }
+
+      .navbar .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        background-color: #fff;
+        padding: 0 24px;
+      }
+
+      .navbar_sitename {
+        color: black;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .navbar_list {
+        list-style: none;
+        display: flex;
+        font-size: 14px;
+        margin: 0px;
+        padding: 0px;
+        height: 100px;
+      }
+
+      .navbar_list li {
+        transition: 0.2s;
+        text-align: center;
+        color: black;
+        padding: 45px 20px;
+        cursor: pointer;
+      }
+
+      .navbar_list li:hover {
+        background-color: rgba(83, 83, 83, 1);
+        color: white;
+      }
+
+      .navbar_list li:hover > a {
+        color: white;
+      }
+
+      .navbar_list a {
+        text-decoration: none;
+        font-weight: 800;
+        color: black;
+      }
+
+      .main {
+        padding: 20px;
+        background-color: #6b768a;
+        color: white;
+
+      }
+
+      .title, .subtitle {
+        margin: 30px auto;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+
+
+      .blocks_area {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .block {
+        width: 360px;
+        margin: 16px;
+        border: solid 1px #eee;
+        transition: 0.2s;
+      }
+
+      .block_empty {
+        width: 360px;
+        margin: 16px;
+      }
+
+      .block:hover {
+        transform: scale(1.07);
+        filter: brightness(1.2);
+      }
+
+      .block_top img {
+        width: 100%;
+        background-size: contain;
+
+      }
+
+
+      .block_bottom {
+        background-color: #333;
+        display: flex;
+        padding: 5px;
+      }
+
+      .icon img {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background: url('');
+        background-size: contain;
+      }
+
+
+      .channel {
+        padding: 10px 0;
+      }
+
+      .channel_title {
+        font-size: 16px;
+        width: 200px;
+        height: 18px;
+        overflow: hidden;
+
+      }
+
+      .channel_account {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .navbar .wrapper {
+          width: 100%;
+          height: 150px;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: center;
+          padding: 10px;
+        }
+
+        .navbar_sitename {
+            margin: 20px auto;
+            font-size: 24px;
+        }
+
+        .navbar_list {
+            display: flex;
+        }
+
+        .navbar_list li {
+            flex: 1;
+            border-radius: 0px;
+            padding: 10px 10px;
+            height: 70px;
+        }
+
+        .navbar_list li + li {
+          margin-left: 5px;
+        }
+
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="wrapper">
+        <div class="navbar_sitename">
+          Twitch Top Games
+        </div>
+        <ul class="navbar_list">
+          <!-- li -->
+        </ul> 
+      </div>
+    </nav>
+    <div class="main">
+      <h2 class="title"></h4>
+      <h4 class="subtitle">Top 20 popular live streams sorted by current viewers</h4>
+      <div class="blocks_area">
+        <!-- block -->
+      </div>
+    </div>
+    <script>
+      const baseUrl = 'https://api.twitch.tv/kraken'
+      var template = `
+        <a class="block" href="$url">
+          <div class="block_top">
+            <img src="$preview">
+          </div>
+          <div class="block_bottom">
+            <div class="icon">
+              <img src="$logo" alt="">
+            </div>
+            <div class="channel">
+              <div class="channel_title">$title</div>
+              <div class="channel_account">$name</div>
+            </div>
+          </div>
+        </a>
+        `
+      // 拿 top 5 的遊戲
+
+      function getTopGames(cb) {
+        fetch(baseUrl + '/games/top?limit=5', {
+          headers: {
+            'Accept': 'application/vnd.twitchtv.v5+json',
+            'Client-ID': 'hwdicbpdwusq387flxfxim7cndokzq'
+          },
+          method: 'GET',
+        }).then(response => {
+            return response.json()
+          }).then(games=> {
+            const topGames = games.top.map((game) => game.game.name)//map()可以對 array 裡面的每個項目執行動作後產生新的 array
+            cb(topGames)
+          }).catch(err => {
+            console.log('error', err)
+          })
+      }
+
+      function getStreams(name, cb) {
+        fetch(baseUrl + '/streams/?limit=20&game=' + encodeURIComponent(name), {
+          headers: {
+            'Accept': 'application/vnd.twitchtv.v5+json',
+            'Client-ID': 'hwdicbpdwusq387flxfxim7cndokzq'
+          },
+          method: 'GET',
+        }).then(response => {
+            return response.json()
+          }).then(data=> {
+            cb(data.streams)
+          }).catch(err => {
+            console.log('error', err)
+          })
+      }
+
+      getTopGames(topGames => {
+        for (let game of topGames) {
+          let element = document.createElement('li')
+          element.innerHTML = game 
+          document.querySelector('.navbar_list').appendChild(element)
+          document.querySelector('.title').innerText = topGames[0]
+        }
+        getStreams(topGames[0], function(data) {
+          appendStreams(data);
+          addPlaceholder();
+          addPlaceholder();
+          addPlaceholder();
+        })
+      })
+
+      document.querySelector('.navbar_list').addEventListener('click', e => {
+        if (e.target.tagName.toLowerCase() === 'li') {
+          var text = e.target.innerText
+          document.querySelector('.title').innerText = text
+          document.querySelector('.blocks_area').innerHTML = ''
+          getStreams(text, (data) => {
+            appendStreams(data)
+            addPlaceholder();
+            addPlaceholder();
+          })
+        }
+      })
+
+      function addPlaceholder() {
+        const placeholder = document.createElement('div')
+        placeholder.classList.add('block_empty')
+        document.querySelector('.blocks_area').appendChild(placeholder)
+      }
+
+      function appendStreams(streams) {
+        streams.forEach((stream) => {
+          let element = document.createElement('div')
+          let content = template
+            .replace('$url', stream.channel.url)
+            .replace('$preview', stream.preview.large)
+            .replace('$logo', stream.channel.logo)
+            .replace('$title', stream.channel.status)
+            .replace('$name', stream.channel.name)
+          document.querySelector('.blocks_area').appendChild(element)
+          element.outerHTML = content
+        })
+      }
+    </script>
+  </body>
+</html>
