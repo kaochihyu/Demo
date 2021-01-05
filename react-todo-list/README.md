@@ -1,6 +1,6 @@
-## React Todo List 
+## React Redux Todo List 
 以 React Redux 製作的 todo list
-* [Demo](https://kaochihyu.github.io/react-todo-list/)
+* [Demo](https://kaochihyu.github.io/react-redux-todo-list/)
 
 ![Imgur](https://imgur.com/GfwDl2z.gif)
 
