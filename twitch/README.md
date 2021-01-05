@@ -1,8 +1,8 @@
-## RWD Website
+## Twitch Game
 串接 Twitch API
 * [Demo](https://kaochihyu.github.io/demo/twitch/)
 
-![Imgur](https://imgur.com/VDPSowu.gif)
+![Imgur](https://imgur.com/jZc3Uoh.gif)
 
 ### 功能
 * 串接 Twitch API，顯示最熱門的五個遊戲
@@ -15,4 +15,5 @@
 
 ### 使用技術
 * 以 flex 進行排版，支援 RWD
-* 
+* 以 fetch 串接 Twitch API
+* 使用 JavaScript 操作 DOM 元件
