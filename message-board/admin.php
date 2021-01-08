@@ -62,29 +62,27 @@
     <section class="comments">
       <table class="admin_comments">
         <tr>
-          <th>id</th>
-          <th>role</th>
-          <th>nickname</th>
-          <th>username</th>
+          <th>用戶身分</th>
+          <th>用戶暱稱</th>
+          <th>用戶帳號</th>
           <th>調整身分</th>
         </tr>
         <?php 
             while($row = $result->fetch_assoc()) {
         ?>
           <tr>
-            <td><?php echo escape($row['id']); ?> </td>
             <td>
               <?php if ($row['role'] === 'ADMIN') { ?>
-              管理員
+              <span class="admin">管理員</span>
               <?php } ?>
               <?php if ($row['role'] === 'NORMAL') { ?>
-              使用者
+              <span class="normal">使用者</span>
               <?php } ?>
               <?php if ($row['role'] === 'BANNED') { ?>
-              停權者
+              <span class="banned">停權者</span>
               <?php } ?>
             </td>
-            <td><?php echo escape($row['nickname']); ?></td>
+            <td>@<?php echo escape($row['nickname']); ?></td>
             <td><?php echo escape($row['username']); ?></td>
             <td>
               <a class="update_comment" href="handle_update_role.php?role=ADMIN&id=<?php echo $row['id']; ?>">管理員</a>

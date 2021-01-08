@@ -48,7 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="warning">注意！本站為練習用網站，因教學用途刻意忽略資安的實作，註冊時請勿使用任何真實的帳號或密碼。</header>
+  <header id="top" class="warning">注意！本站為練習用網站，因教學用途刻意忽略資安的實作，註冊時請勿使用任何真實的帳號或密碼。</header>
   <main class="board">
     <div class="board_top">
       <div class="buttons">
@@ -144,6 +144,7 @@
       <?php }; ?> 
     </div>
   </main>
+  <a class="top_button" href="#top">^</a>
   <script>
     var btn = document.querySelector('.update_nickname').addEventListener('click', function() {
       var form = document.querySelector('.board_nickname_form');
