@@ -3,6 +3,8 @@
 
 * [Demo]()
 
+* 管理員帳號密碼：admin_user/admin_user (可進入到管理員後台)
+
 ![Imgur](https://imgur.com/LkJRCu8.gif)
 
 ### 留言板功能
