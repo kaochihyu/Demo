@@ -26,7 +26,7 @@
     }
 
     if ($user["role"] === "BANNED") {
-      return $action !== 'create';
+      return $action == 'update' && $comment["username"] === $user["username"];
     }
   }
 
