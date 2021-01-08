@@ -21,4 +21,5 @@
 ![Imgur image](https://imgur.com/bLDLxxk.jpg)
 
 ### 使用技術
-* 
+* 以 PHP 實作具備會員系統的留言板
+* 使用 prepare statement 存取 MySQL 資料庫來防範 SQL injection
