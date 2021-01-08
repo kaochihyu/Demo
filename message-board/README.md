@@ -12,6 +12,7 @@
 * 管理者可以新增、編輯、刪除所有留言
 * 管理者可以設定權限(使用者、管理者、停權者)
 * 停權者無法新增留言但可以編輯、刪除自己的留言
+* 換頁功能
 
 ![Imgur image](https://imgur.com/Mvca70z.jpg)
 ![Imgur image](https://imgur.com/4Q0bbch.jpg)
