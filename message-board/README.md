@@ -1,7 +1,7 @@
 ## Message Board 
 一個有登入機制的留言板
 
-* [Demo]()
+* [Demo](http://chihyu.tw/message-board/index.php)
 
 * 管理員帳號密碼：admin_user/admin_user (可進入到管理員後台)
 
@@ -23,3 +23,4 @@
 ### 使用技術
 * 以 PHP 實作具備會員系統的留言板
 * 使用 prepare statement 存取 MySQL 資料庫來防範 SQL injection
+* 把留言板部屬到 AWS EC2 遠端主機
