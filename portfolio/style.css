@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header, section, footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  padding: 80px; 
+}
+
+.header {
+  background: #F5FF7F;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_title, .section_title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.pink_button {
+  width: auto;
+  background: #fff;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 60px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about_content {
+  background: #DEEFFF;
+  max-width: 1000px;
+  padding: 60px;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.about_text {
+  flex: 1;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.about_image  {
+  max-width: 300px;
+  text-align: center;
+}
+
+.about_image > img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 28px;
+}
+
+.about_link {
+  padding: 10px 20px;
+}
+
+.project_section {
+  background: #fff;
+}
+
+.project_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+}
+
+.project {
+  max-width: 450px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+.project:hover > .project_text {
+  bottom: 0;
+}
+
+.project_image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 0px;
+}
+
+.project_text {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  background: #F5FF7F;
+  opacity: 0.9;
+  position: absolute;
+  bottom: -100%;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.project_link {
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.project_description {
+  padding: 20px;
+  font-size: 14px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+footer {
+  background: #000;
+  color: #888;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  
+}
