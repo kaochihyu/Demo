@@ -11,7 +11,7 @@ let datas = [
 		img: "./image/twitch-picture-demo.png",
 		title: "Twitch Top Game",
 		description: "A twitch top game platform.",
-		brDescription: "Using Hooks to handle state.",
+		brDescription: "Fetching data with Twitch API",
 		github: "https://github.com/kaochihyu/demo/tree/master/twitch",
 		demo: "https://kaochihyu.github.io/demo/twitch/",
 	},
