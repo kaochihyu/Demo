@@ -28,7 +28,7 @@ let datas = [
 		title: "Tap Dance website.",
 		description: "A RWD website.",
 		brDescription: "Responsive web design web page",
-		github: "https://github.com/kaochihyu/demo/tree/master/rwd-websit",
+		github: "https://github.com/kaochihyu/demo/tree/master/rwd-website",
 		demo: "https://kaochihyu.github.io/demo/rwd-website/",
 	},
 ];
