@@ -25,8 +25,8 @@ let datas = [
 	},
 	{
 		img: "./image/rwd-website-demo.png",
-		title: "A Tap Dance website.",
-		description: "A mesage board with PHP, MySQL.",
+		title: "Tap Dance website.",
+		description: "A RWD website.",
 		brDescription: "Responsive web design web page",
 		github: "https://github.com/kaochihyu/demo/tree/master/rwd-websit",
 		demo: "https://kaochihyu.github.io/demo/rwd-website/",
